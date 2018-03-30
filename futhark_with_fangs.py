@@ -79,6 +79,7 @@ def futhark_with_fangs(module, instance=None,
 
 if __name__ == '__main__':
     import argparse
+    import sys
 
     parser = argparse.ArgumentParser(description='Futhark with Fangs!')
     parser.add_argument('module', metavar='MODULE',
@@ -89,5 +90,6 @@ if __name__ == '__main__':
                         help='The port to listen from.')
     args = parser.parse_args()
 
+    sys.path = ["."] + sys.path
     module = __import__(args.module)
     futhark_with_fangs(module, server_address=(args.host, args.port))
