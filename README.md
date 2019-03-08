@@ -18,7 +18,7 @@ entry sumrows (xss: [][]i32) = map (reduce (+) 0) xss
 Compile it to a Python module:
 
 ```
-$ futhark-pyopencl --library futapp.fut
+$ futhark pyopencl --library futapp.fut
 ```
 
 Give it some fangs!
@@ -50,8 +50,7 @@ Use `--port` and ``--host`` to change it.
 * Python 3 (this is 2018, people)
 * PyOpenCL
 * Numpy
-* Futhark 0.4.0 (only available [from
-  Git](https://github.com/diku-dk/futhark) as of this writing).
+* Futhark 0.4.1 or newer.
 
 If you are lucky, you can run `pip3 install -r requirements.txt` to
-get them.
+get the Python dependencies.
