@@ -47,7 +47,7 @@ Use `--port` and ``--host`` to change it.
 
 ## Requirements
 
-* Python 3 (this is 2018, people)
+* Python 3 (this ~~is~~ was 2018, people)
 * PyOpenCL
 * Numpy
 * Futhark 0.4.1 or newer.
