@@ -3,7 +3,7 @@
 """Python module for providing a web RPC frontend to Futhark programs.
 
 Can be run as a program, in which case the first argument must be the
-name of a module produced by 'futhark-pyopencl --library' (i.e. the
+name of a module produced by 'futhark pyopencl --library' (i.e. the
 file name without the 'py' part).
 """
 
@@ -68,7 +68,7 @@ class FutharkRequestHandler(BaseHTTPRequestHandler):
 
 def futhark_with_fangs(module, instance=None,
                        server_address=('', 8000)):
-    """Run a web frontend for a futhark-pyopencl-generated module."""
+    """Run a web frontend for a 'futhark pyopencl'-generated module."""
     if instance == None:
         instance = module.__dict__[module.__name__]()
     httpd = HTTPServer(server_address,
